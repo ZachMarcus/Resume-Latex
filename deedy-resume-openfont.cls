@@ -26,64 +26,85 @@
 
 % Trebuchet MS
 % Georgia
+% Arial
 %
 % Tried:
 % Verdana+Georgia
 % EB Garamond+Free Helvetian  which is a little different - the serif for the content
+% Noto Sans+ Noto Serif - Google's pairings
+%
+% Trying archetype comparisons:
+%
+% Serifs I don't hate:
+% GFS Didot
+% Old Standard TT
+% Tinos
+% Vollkorn
+%
+% Sans Serifs I don't hate:
+% Arimo
+% Cantarell
+% Lato
+% Noto
+% Roboto
+% Verdana
+%
 % Font definitions
 \defaultfontfeatures{Mapping=tex-text}
-\def \ContentFont {Verdana}
-\def \FluffFont {Georgia}
+\def \FluffFont {Fira Sans}
+\def \ContentFont {Lato}
 \def \NameFont {\FluffFont}
 \def \ContactFont {\FluffFont}
 \def \HeaderFont {\FluffFont}
 \def \SubHeaderFont {\FluffFont}
 \def \AboutFont {\FluffFont}
 
+
+
 %\setmainfont{\ContentFont}
 %\setsansfont{\ContentFont}
 %\setmonofont{\ContentFont}
-\newcommand{\custombold}[1]{\color{subheadings}\fontspec{\SubHeaderFont}\selectfont #1 \normalfont}
+\newcommand{\custombold}[1]{\color{subheadings}\fontspec\SubHeaderFont\selectfont #1 \normalfont}
 
 % Other defines for title
 \titleformat{\subsection}{\color{subheadings}
-\fontspec{\ContentFont}\fontsize{12pt}{12pt}\selectfont\raggedright\bfseries}{}{0em}{}
+\fontspec\ContentFont\fontsize{12pt}{12pt}\selectfont\raggedright\bfseries}{}{0em}{}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
-% Name command
+% Name command, originally 40pt
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec{\NameFont}\fontsize{40pt}{10cm}\selectfont #1 
-		\fontspec{\NameFont}\selectfont #2
+		\fontspec\NameFont\fontsize{37pt}{10cm}\selectfont #1 
+		\fontspec\NameFont\selectfont #2
     } \\
 	\vspace{5pt}
-    \centering{ \color{headings}\fontspec\NameFont\fontsize{11pt}{14pt}\selectfont #3}
+    \centering{ \color{headings}\fontspec\NameFont\fontsize{12pt}{14pt}\selectfont #3}
 	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 	\vspace{-15pt}
 }
 
 % Headings command - modifying section
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{\HeaderFont}\fontsize{16pt}{24pt}\selectfont\uppercase}{} {0em}{}
+\scshape\fontspec\HeaderFont\fontsize{16pt}{24pt}\selectfont\uppercase}{} {0em}{}
 
 % Subheadings command - runsubsection
 \newcommand{\runsubsection}[2]{\color{subheadings}
-\fontspec{\SubHeaderFont}\fontsize{12pt}{12pt}\selectfont\bfseries{#1}\hfill{#2}\\\normalfont}
+\fontspec[BoldFont=Fira Sans Bold]\SubHeaderFont\fontsize{12pt}{12pt}\selectfont\bfseries{#1}\hfill{#2}\\\normalfont}
 
 % About command
-\newcommand{\about}[2]{\color{subheadings}\fontspec{\AboutFont}\textit{#1} {\hfill #2}}
+\newcommand{\about}[2]{\color{subheadings}\fontspec\AboutFont\textit{#1} {\hfill #2}}
 
 % Section separators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
 
 % Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep0.8mm \parskip0pt \parsep0pt \fontspec{\ContentFont}\fontsize{12pt}{12pt}}{\end{itemize}\vspace{-\topsep}}
+\newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep0.8mm \parskip0pt \parsep0pt \fontspec\ContentFont\fontsize{12pt}{12pt}}{\end{itemize}\vspace{-\topsep}}
 
 % Skills command
-\newcommand{\skill}[2]{\color{subheadings}\fontspec{\ContentFont}\fontsize{12pt}{12pt} \item[]\hspace{-10mm} \textit{#1:}{#2}}
+\newcommand{\skill}[2]{\color{subheadings}\fontspec\ContentFont\fontsize{12pt}{12pt} \item[]\hspace{-10mm} \textit{#1}{#2}}
 
 
 
