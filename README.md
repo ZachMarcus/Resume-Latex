@@ -1,4 +1,4 @@
 # Resume-Latex
 
-~[Resume Picture Here](./zachary-marcus-resume.jpg)
+![Resume Picture Here](./zachary-marcus-resume.jpg)
 
