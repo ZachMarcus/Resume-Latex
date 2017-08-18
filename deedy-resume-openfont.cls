@@ -51,14 +51,14 @@
 %
 % Font definitions
 \defaultfontfeatures{Mapping=tex-text}
-\def \FluffFont {Fira Sans}
+%\def \FluffFont {Fira Sans}
+\newcommand{\FluffFont}[0]{Fira Sans}
 \def \ContentFont {Lato}
 \def \NameFont {\FluffFont}
 \def \ContactFont {\FluffFont}
 \def \HeaderFont {\FluffFont}
 \def \SubHeaderFont {\FluffFont}
 \def \AboutFont {\FluffFont}
-
 
 
 %\setmainfont{\ContentFont}
