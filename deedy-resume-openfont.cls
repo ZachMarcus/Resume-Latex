@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0.8cm]{geometry}
+\usepackage[hmargin=1.25cm, vmargin=0.7cm]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
@@ -18,21 +18,15 @@
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec,xltxtra,xunicode}
 \usepackage{enumitem}
+\usepackage{outline}
+\usepackage{contour}
+\usepackage{relsize}
 
 % Color definitions
 \definecolor{primary}{HTML}{000000} 
 \definecolor{headings}{HTML}{000000}
 \definecolor{subheadings}{HTML}{000000}
 
-% Trebuchet MS
-% Georgia
-% Arial
-%
-% Tried:
-% Verdana+Georgia
-% EB Garamond+Free Helvetian  which is a little different - the serif for the content
-% Noto Sans+ Noto Serif - Google's pairings
-%
 % Trying archetype comparisons:
 %
 % Serifs I don't hate:
@@ -53,22 +47,23 @@
 \defaultfontfeatures{Mapping=tex-text}
 %\def \FluffFont {Fira Sans}
 \newcommand{\FluffFont}[0]{Fira Sans}
-\def \ContentFont {Lato}
-\def \NameFont {\FluffFont}
-\def \ContactFont {\FluffFont}
-\def \HeaderFont {\FluffFont}
-\def \SubHeaderFont {\FluffFont}
-\def \AboutFont {\FluffFont}
+\newcommand{\ContentFont}[0]{Lato}
+\newcommand{\NameFont}[0]{\FluffFont}
+\newcommand{\ContactFont}[0]{\FluffFont}
+\newcommand{\HeaderFont}[0]{\FluffFont}
+\newcommand{\SubHeaderFont}[0]{\FluffFont}
+\newcommand{\AboutFont}[0]{\FluffFont}
 
+\newcommand{\ContentSize}[0]{11.2pt}
 
-%\setmainfont{\ContentFont}
+\setmainfont{\ContentFont}
 %\setsansfont{\ContentFont}
 %\setmonofont{\ContentFont}
 \newcommand{\custombold}[1]{\color{subheadings}\fontspec\SubHeaderFont\selectfont #1 \normalfont}
 
 % Other defines for title
 \titleformat{\subsection}{\color{subheadings}
-\fontspec\ContentFont\fontsize{12pt}{12pt}\selectfont\raggedright\bfseries}{}{0em}{}
+\fontspec\ContentFont\selectfont\raggedright\bfseries}{}{0em}{}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\section}{0pt}{0pt}{0pt}
@@ -77,7 +72,7 @@
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec\NameFont\fontsize{37pt}{10cm}\selectfont #1 
+		\fontspec\NameFont\fontsize{38pt}{10cm}\selectfont #1 
 		\fontspec\NameFont\selectfont #2
     } \\
 	\vspace{5pt}
@@ -92,19 +87,22 @@
 
 % Subheadings command - runsubsection
 \newcommand{\runsubsection}[2]{\color{subheadings}
-\fontspec[BoldFont=Fira Sans Bold]\SubHeaderFont\fontsize{12pt}{12pt}\selectfont\bfseries{#1}\hfill{#2}\\\normalfont}
+\fontspec[BoldFont=Fira Sans Bold]\SubHeaderFont
+\bfseries{\large#1}
+\hfill{\normalsize#2}\\
+\fontsize{\ContentSize}{\ContentSize}\normalfont}
 
 % About command
-\newcommand{\about}[2]{\color{subheadings}\fontspec\AboutFont\textit{#1} {\hfill #2}}
+\newcommand{\about}[2]{\color{subheadings}\fontspec\AboutFont\raggedright{#1} {\hfill #2}\hspace{-1.2mm}}
 
 % Section separators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
 
-% Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep0.8mm \parskip0pt \parsep0pt \fontspec\ContentFont\fontsize{12pt}{12pt}}{\end{itemize}\vspace{-\topsep}}
+\newenvironment{tightemize}{\vspace{-\topsep}\vspace{-1.0mm} \fontspec\ContentFont\fontsize{\ContentSize}{\ContentSize} \begin{itemize}\itemsep0.3mm \parskip0pt \parsep0pt }{\end{itemize}\vspace{-\topsep}}
+
 
 % Skills command
-\newcommand{\skill}[2]{\color{subheadings}\fontspec\ContentFont\fontsize{12pt}{12pt} \item[]\hspace{-10mm} \textit{#1}{#2}}
+\newcommand{\skill}[2]{\color{subheadings}\fontspec\ContentFont \item[]\hspace{-10mm} \textit{#1}{#2}}
 
 
 
