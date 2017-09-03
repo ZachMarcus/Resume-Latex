@@ -89,11 +89,11 @@
 \newcommand{\runsubsection}[2]{\color{subheadings}
 \fontspec[BoldFont=Fira Sans Bold]\SubHeaderFont
 \bfseries{\large#1}
-\hfill{\normalsize#2}\\
+\hfill{\fontspec\ContentFont\fontsize{\ContentSize}{\ContentSize}\textnormal{#2}}\\
 \fontsize{\ContentSize}{\ContentSize}\normalfont}
 
 % About command
-\newcommand{\about}[2]{\color{subheadings}\fontspec\AboutFont\raggedright{#1} {\hfill #2}\hspace{-1.2mm}}
+\newcommand{\about}[2]{\color{subheadings}\fontspec\AboutFont\raggedright\textit{#1} {\hfill #2}\hspace{-1.2mm}}
 
 % Section separators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
