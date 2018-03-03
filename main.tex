@@ -1,36 +1,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is a modified version of the deedy template
-% 
-% Deedy - One Page Two Column Resume
+% Based off of Deedy - One Page Two Column Resume
 % LaTeX Template
 % Version 1.1 (30/4/2014)
 %
-% Original author:
+% Original author of template:
 % Debarghya Das (http://debarghyadas.com)
 %
 % Original repository:
 % https://github.com/deedydas/Deedy-Resume
 %
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
+% IMPORTANT: THIS NEEDS TO BE COMPILED WITH XeLaTeX
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[]{deedy-resume-openfont}
-\title{zachary-marcus-resume}
-
-% Preamble - Fixing issues with deedy-resume's single column resume template
+\documentclass[]{resume-style}
+\title{zachary-marcus-resume-new}
 
 % - For colored links - 
 %\hypersetup{colorlinks}
 
 % -Zach
-
 
 \begin{document}
 
@@ -38,14 +28,14 @@
 
 \namesection{}{Zachary Marcus}{
 \vspace{-0.5mm}
-\bf{\href{mailto:zacharyjmarcus@gmail.com}{zacharyjmarcus@gmail.com}}
+\bf{\href{mailto:marcus.z@northeastern.edu}{marcus.z@northeastern.edu}}
 \hspace{3 mm}$\bullet$\hspace{3 mm}
 \bf{\urlstyle{same}\url{https://zacharymarcus.xyz}}
 \hspace{3 mm}$\bullet$\hspace{3 mm}
 \bf{704.763.5707}
 \\
 \vspace{0.7mm}
-\bf{Available for computer engineering internship positions January - June 2018}
+%\bf{Available for full-time positions May 2019}
 %\contournumber{1}
 %\contour{headings}{Available for computer engineering internship positions for January - June 2018} \\
 }
@@ -62,7 +52,7 @@
 \about{Candidate for Bachelor of Science in Computer Engineering and Computer Science}{} \\
 \vspace{0.25mm}
 \contournumber{3} % Print out contour 4 times on top of one another
-\textit{G\hspace{0.01mm}P\hspace{0.03mm}A\hspace{0.02mm}:  }\contour{subheadings}{3.84}
+\textit{G\hspace{0.01mm}P\hspace{0.03mm}A\hspace{0.02mm}:  }\contour{subheadings}{3.8}
 \hspace{2mm}$\bullet$\hspace{2.75mm}\contournumber{1}\textit{Graduation Date:} \contour{subheadings}{May 2019}
 \vspace{0.8mm}
 
@@ -70,7 +60,7 @@
 \skill{Honors:}{ Dean's List, National Merit Scholar}
 \vspace{0mm}
 %\\ \vspace{1mm}\hspace{5mm} -> to be put in wherever the line break is
-\skill{Relevant Coursework:}{ High Performance Computing, Object Oriented Design, Networks and Distributed \\ \vspace{0.4mm}\hspace{27.8mm}Systems, Algorithms and Data, Embedded Design, Digital Logic}
+%\vspace{0.4mm}\hspace{27.8mm}Systems, Algorithms and Data, Embedded Design, Digital Logic}
 \end{tightemize}
 
 \vspace{-1mm}
@@ -79,19 +69,36 @@
 %------------------------------------------------
 
 \section{\hfill Work Experience \hfill}
+
+\runsubsection{Google LLC}{Mountain View, CA}
+\about{Software Engineering Intern}{April 2018 - June 2018} \\
+\vspace{0.5mm}
+%------------------------------------------------
+\vspace{2mm}
+\runsubsection{Facebook, Inc.}{Menlo Park, CA}
+\vspace{0.25mm}
+\about{Software Engineering Intern}{January 2018 - March 2018}
+\vspace{2mm} \\
+\begin{tightemize}
+\vspace{-1.0mm}
+\item Contributed to consistency efforts across Facebook's distributed-cache data store
+\item Identified performance deficiency and decreased all upstream queries to the social graph by 2.2\%
+\end{tightemize}
+
+%------------------------------------------------
+\vspace{2mm}
 \runsubsection{MIT Lincoln Laboratory}{Lexington, MA}
 \about{Software Engineering Co-op}{January 2017 - September 2017}
 \vspace{-1.35mm}
 \begin{tightemize}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\item Maintain DoD secret clearance
-\item Designed C++ library to facilitate radar subsystem integration
-\item Wrote and evaluated large-scale parallel applications
+\item Created C++ library to facilitate radar subsystem integration between defense contractors
 \item Analyzed performance bottlenecks and optimized real-time signal processing
-\item Developed mission-critical software in C++ for use in signal processing
+\item Developed mission-critical software in C++ for use in distributed signal processing
 %\item Leveraged open communication libraries to achieve high performance across platforms
-\item Designed data collection framework in Python to gather gigabytes of data in the form of news articles
-\item Leveraged TensorFlow and image-processing libraries; placed second in fake news detection hackathon
+%\item Designed data collection framework in Python to gather gigabytes of data from news articles
+%\item Leveraged TensorFlow and image-processing libraries; earned first in fake news detection hackathon
+\item Designed data collection and image analysis framework; earned first in fake news detection hackathon
 \end{tightemize}
 
 %------------------------------------------------
@@ -103,10 +110,9 @@
 \begin{tightemize}
 %\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \item Designed Python tool to streamline driver performance analysis
-\item Interfaced with hardware engineers to determine performance metrics for applications
-\item Developed scripts to test modifications to shader compiler
-\item Wrote and modified test cases to match new language specifications
-\item Determined sources of bugs in shader compiler
+\item Collaborated with hardware engineers to determine performance metrics for applications
+\item Developed test cases and internal transcompiler for compiler's new intermediate language specification
+\item Improved performance of 2 major applications by 15\% or more by optimizing cache and register usage%used in production by millions % 50 million = XBOX1 + PS4 sales
 \end{tightemize}
 
 \vspace{-0.7mm}
@@ -114,13 +120,13 @@
 
 \runsubsection{International Supercomputing Competitions}{Boston, MA}
 \vspace{0.138mm}
-\about{Northeastern University Competitor}{July 2015 - Present}
+\about{Northeastern University Team Application Leader}{July 2015 - Present}
 \vspace{1.25mm}
 \begin{tightemize}
+\item Gained hands-on experience in high performance hardware and optimized configurations for applications
+\item Profiled application-specific performance characteristics to make source-code modifications
+\item Earned first place nationally at SC 2017; was invited to submit results for a feature in Parallel Computing
 \item Broke the competition record for Linpack at ISC 2017 in Frankfurt, Germany
-\item Gained valuable experience in high performance hardware and optimize configurations for applications (e.g., the LAMMPS Molecular Dynamics Simulator) on experimental systems
-\item Made critical decisions about hardware and software stacks to use
-\item Analyzed application-specific performance characteristics to make source-code modifications
 \end{tightemize}
 
 \vspace{2mm}
@@ -131,9 +137,9 @@
 \begin{tightemize}
 %\fontsize{11pt}{11pt}
 %\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\item Developed Android application and executables for side-channel analysis of mobile device chipsets
-\item Presented findings at Research, Innovation, and Scholarship Expo at Northeastern
-\item Expanded Android application for simplified GPU benchmarking, porting a benchmark suite designed for heterogeneous computing architectures
+\item Developed Android binaries for side-channel analysis of mobile device chipsets
+\item Presented findings at Research, Innovation, and Scholarship Expo at Northeastern University
+\item Expanded Android app for simplified GPU benchmarking, porting a heterogeneous benchmark suite
 \end{tightemize}
 
 \vspace{-1mm}
@@ -141,32 +147,17 @@
 \vspace{3.1mm}
 \begin{tightemize}
 %\fontsize{11pt}{11pt}
-\skill{Proficient Languages:}{\hspace{5mm}C++, C, Python, Java}
+\skill{Proficient Languages:}{\hspace{5mm}C++, Python, C, Java}
 \skill{Familiar Languages:}{\hspace{7.29mm}MIPS Assembly, SystemVerilog, JavaScript, HTML, CSS, XML}
-\skill{Development Tools:}{\hspace{7.68mm}Git, SVN, Perforce, Linux, Windows}
-\skill{Technical Experience:}{\hspace{3.4mm} MPI, OpenMP, Embedded C, OpenCL}
-\skill{Clubs and Activities:}{\hspace{6.52mm}Planetary Lander Developer, IEEE Webmaster, NEU Hardware Hackathon (1st),}
+\skill{Development Tools:}{\hspace{7.68mm}Git, Mercurial, SVN, Perforce, Linux, Windows}
+\skill{Technical Experience:}{\hspace{3.4mm} MPI, OpenMP, Embedded C, CUDA, OpenCL, TensorFlow, Soldering}
+\skill{Clubs and Activities:}{\hspace{6.52mm}Planetary Lander Software Lead, IEEE Webmaster, NEU Hardware Hackathon (1st),}
 \skill{}{\hspace{56.8mm}MakeBU Hackathon (1st), Pavlok Hardware Hackathon (2nd)}
 %Boston-area pub crawl leader? Working proficiency in Spanish?
 \skill{Volunteer Work:}{\hspace{13.34mm}Husky Ambassadors, Hostelling International, Generation Citizen}
 \end{tightemize}
-% Technologies:
-% Python - Flask, Newspaper
-% Git, SVN, Perforce
-% Linux, Windows
-% MPI, OpenMP
-
-% Development: Git, SVN, Perforce, Linux, Windows
-% Technical Experience: MPI, OpenMP, Embedded C, Data Processing, 
 
 \end{document}  \documentclass[]{article}
-
-
-
-
-
-
-
 
 
 

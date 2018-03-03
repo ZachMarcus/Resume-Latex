@@ -1,5 +1,7 @@
+% These styles should make it easier to add and remove sections without fiddling too much with styles
+
 % Intro Options
-\ProvidesClass{deedy-resume-openfont}[2014/04/30 CV class]
+\ProvidesClass{resume-style}[2014/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -68,11 +70,11 @@
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
-% Name command, originally 40pt
+% Name command
 \newcommand{\namesection}[3]{
 	\centering{
 		\sffamily
-		\fontspec\NameFont\fontsize{38pt}{10cm}\selectfont #1 
+		\fontspec\NameFont\fontsize{32pt}{10cm}\selectfont #1 
 		\fontspec\NameFont\selectfont #2
     } \\
 	\vspace{5pt}
@@ -83,7 +85,7 @@
 
 % Headings command - modifying section
 \titleformat{\section}{\color{headings}
-\scshape\fontspec\HeaderFont\fontsize{16pt}{24pt}\selectfont\uppercase}{} {0em}{}
+\scshape\fontspec\HeaderFont\fontsize{15pt}{22pt}\selectfont\uppercase}{} {0em}{}
 
 % Subheadings command - runsubsection
 \newcommand{\runsubsection}[2]{\color{subheadings}
@@ -98,13 +100,9 @@
 % Section separators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
 
-\newenvironment{tightemize}{\vspace{-\topsep}\vspace{-1.0mm} \fontspec\ContentFont\fontsize{\ContentSize}{\ContentSize} \begin{itemize}\itemsep0.3mm \parskip0pt \parsep0pt }{\end{itemize}\vspace{-\topsep}}
-
+\newenvironment{tightemize}{\vspace{-\topsep}\vspace{-1.0mm} \fontspec\ContentFont\fontsize{\ContentSize}{\ContentSize} \begin{itemize}\itemsep0.5mm \parskip0pt \parsep0pt }{\end{itemize}\vspace{-\topsep}}
 
 % Skills command
 \newcommand{\skill}[2]{\color{subheadings}\fontspec\ContentFont \item[]\hspace{-10mm} \textit{#1}{#2}}
-
-
-
 
 
