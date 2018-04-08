@@ -105,4 +105,3 @@
 % Skills command
 \newcommand{\skill}[2]{\color{subheadings}\fontspec\ContentFont \item[]\hspace{-10mm} \textit{#1}{#2}}
 
-
