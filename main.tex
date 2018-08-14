@@ -15,7 +15,7 @@
 
 
 \documentclass[]{resume-style}
-\title{zachary-marcus-resume-new}
+\title{zachary-marcus-resume}
 
 % - For colored links - 
 %\hypersetup{colorlinks}
@@ -28,17 +28,18 @@
 
 \namesection{}{Zachary Marcus}{
 \vspace{-0.5mm}
-\bf{\href{mailto:marcus.z@northeastern.edu}{marcus.z@northeastern.edu}}
+\bf{\href{mailto:zacharyjmarcus@gmail.com}{zacharyjmarcus@gmail.com}}
 \hspace{3 mm}$\bullet$\hspace{3 mm}
-\bf{\urlstyle{same}\url{https://zacharymarcus.xyz}}
+\bf{\urlstyle{same}\url{https://zmarcus.com}}
 \hspace{3 mm}$\bullet$\hspace{3 mm}
 \bf{704.763.5707}
 \\
-\vspace{0.7mm}
-%\bf{Available for full-time positions May 2019}
+%\vspace{0.7mm}
 %\contournumber{1}
-%\contour{headings}{Available for computer engineering internship positions for January - June 2018} \\
-}
+%\contour{headings}{Seeking full-time positions May 2019} \\
+%\contour{headings}{Seeking full-time software engineering role at Facebook for 2019} \\
+%\contour{headings}{Seeking full-time software engineering role at Google for 2019} \\
+} % end namesection
 
 \smallskip
 
@@ -52,7 +53,9 @@
 \about{Candidate for Bachelor of Science in Computer Engineering and Computer Science}{} \\
 \vspace{0.25mm}
 \contournumber{3} % Print out contour 4 times on top of one another
-\textit{G\hspace{0.01mm}P\hspace{0.03mm}A\hspace{0.02mm}:  }\contour{subheadings}{3.8}
+% GPA letters seemed to be spaced out funny, manually adding space
+\textit{G\hspace{0.01mm}P\hspace{0.03mm}A\hspace{0.02mm}:  }
+\contour{subheadings}{3.8}
 \hspace{2mm}$\bullet$\hspace{2.75mm}\contournumber{1}\textit{Graduation Date:} \contour{subheadings}{December 2018}
 \vspace{0.8mm}
 
@@ -71,39 +74,37 @@
 \section{\hfill Work Experience \hfill}
 
 \runsubsection{Google LLC}{Mountain View, CA}
-\about{Software Engineering Intern\hspace{2mm}|\hspace{2mm}ChromeOS}{April 2018 - Present} \\
+\about{Software Engineering Intern\hspace{2mm}|\hspace{2mm}ChromeOS - WiFi}{April 2018 - Present} \\
 \vspace{0.5mm}
 \begin{tightemize}
-\vspace{-0.1mm}
-\item Refactoring test design and hierarchy to reduce technical debt and facilitate further tests
-\item Improving test infrastructure of ChromeOS wifi performance by automating changes to test environment
+\vspace{0.1mm}
+\item Designed and implemented new features to detect regressions during device analysis and bring-up
+\item Refactored test design to reduce technical debt and facilitate reliability and performance testing
+\item Collaborated with other engineers and a third-party vendor to incorporate new chamber into testing
+\item Improved performance measurements by leveraging chamber to characterize real-world WiFi behavior
 \end{tightemize}
 %------------------------------------------------
 \vspace{2mm}
 \runsubsection{Facebook, Inc.}{Menlo Park, CA}
 \vspace{0.25mm}
-\about{Software Engineering Intern\hspace{2mm}|\hspace{2mm}Infrastructure - TAO Team}{January 2018 - March 2018} \\
-\vspace{2mm}
+\about{Software Engineering Intern\hspace{2mm}|\hspace{2mm}Infrastructure - TAO}{January 2018 - March 2018} \\
+\vspace{1.5mm}
 \begin{tightemize}
 \vspace{-1.0mm}
 \item Improved consistency across Facebook's major data store, a distributed cache written in C++
-\item Designed and implemented a new method of evicting stale cache items, improving hit rate by 0.6\%
-\item Decreased queries per second to leader machines, saving millions in operating costs
+\item Designed and implemented a new method of evicting stale cache items, improving hit rate by 0.7\%
+\item Decreased upstream queries per second to leader machines, saving millions in operating costs
 \end{tightemize}
 
 %------------------------------------------------
 \vspace{2mm}
 \runsubsection{MIT Lincoln Laboratory}{Lexington, MA}
-\about{Software Engineering Co-op\hspace{2mm}|\hspace{2mm}Embedded and Open Systems Group}{January 2017 - September 2017}
+\about{Software Engineering Co-op\hspace{2mm}|\hspace{2mm}Embedded and Open Systems}{January 2017 - September 2017}
 \vspace{-1.35mm}
 \begin{tightemize}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \item Created C++ library to facilitate radar subsystem integration between defense contractors
-\item Analyzed performance bottlenecks and optimized real-time signal processing
-\item Developed mission-critical software in C++ for use in distributed signal processing
-%\item Leveraged open communication libraries to achieve high performance across platforms
-%\item Designed data collection framework in Python to gather gigabytes of data from news articles
-%\item Leveraged TensorFlow and image-processing libraries; earned first in fake news detection hackathon
+\item Developed mission-critical software in C++ and analyzed bottlenecks for real-time signal processing
 \item Designed data collection and image analysis framework; earned first in fake news detection hackathon
 \end{tightemize}
 
@@ -111,12 +112,11 @@
 \vspace{2mm}
 \runsubsection{Advanced Micro Devices (AMD)}{Boxborough, MA}
 \vspace{0.65mm}
-\about{Software Engineering Co-op\hspace{2mm}|\hspace{2mm}Shader Compiler Group}{January 2016 - August 2016}
+\about{Software Engineering Co-op\hspace{2mm}|\hspace{2mm}Shader Compiler}{January 2016 - August 2016}
 \vspace{1.28mm}
 \begin{tightemize}
 %\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \item Designed Python tool to streamline driver performance analysis
-\item Collaborated with hardware engineers to determine performance metrics for applications
 \item Developed test cases and internal transcompiler for compiler's new intermediate language specification
 \item Improved performance of 2 major applications by 15\% or more by optimizing cache and register usage%used in production by millions % 50 million = XBOX1 + PS4 sales
 \end{tightemize}
@@ -129,9 +129,8 @@
 \about{Northeastern University Team Application Leader}{July 2015 - Present}
 \vspace{1.25mm}
 \begin{tightemize}
-\item Gained hands-on experience in high performance hardware and optimized configurations for applications
-\item Profiled application-specific performance characteristics to make source-code modifications
-\item Earned first place nationally at SC 2017; was invited to submit results for a feature in Parallel Computing
+\item Profiled application-specific performance characteristics to make source code modifications
+\item Earned first place nationally at SC 2017; primary author of paper published in \textit{Parallel Computing}
 \item Broke the competition record for Linpack at ISC 2017 in Frankfurt, Germany
 \end{tightemize}
 
@@ -144,7 +143,6 @@
 %\fontsize{11pt}{11pt}
 %\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \item Developed Android binaries for side-channel analysis of mobile device chipsets
-\item Presented findings at Research, Innovation, and Scholarship Expo at Northeastern University
 \item Expanded Android app for simplified GPU benchmarking, porting a heterogeneous benchmark suite
 \end{tightemize}
 
@@ -153,10 +151,10 @@
 \vspace{3.1mm}
 \begin{tightemize}
 %\fontsize{11pt}{11pt}
-\skill{Proficient Languages:}{\hspace{5mm}C++, Python, C, Java}
-\skill{Familiar Languages:}{\hspace{7.29mm}MIPS Assembly, SystemVerilog, JavaScript, HTML, CSS, XML}
+\skill{Proficient Languages:}{\hspace{5mm}C++, Python, C, Javascript, Java}
+\skill{Familiar Languages:}{\hspace{7.29mm}MIPS Assembly, SystemVerilog}
 \skill{Development Tools:}{\hspace{7.68mm}Git, Mercurial, SVN, Perforce, Linux, Windows}
-\skill{Technical Experience:}{\hspace{3.4mm} MPI, OpenMP, Embedded C, CUDA, OpenCL, TensorFlow, Soldering}
+\skill{Technical Experience:}{\hspace{3.4mm} MPI, OpenMP, React, Angular, HTML5, CSS3, CUDA, OpenCL, Soldering}
 \skill{Clubs and Activities:}{\hspace{6.52mm}Planetary Lander Software Lead, IEEE Webmaster, NEU Hardware Hackathon (1st),}
 \skill{}{\hspace{56.8mm}MakeBU Hackathon (1st), Pavlok Hardware Hackathon (2nd)}
 %Boston-area pub crawl leader? Working proficiency in Spanish?
@@ -164,5 +162,6 @@
 \end{tightemize}
 
 \end{document}  \documentclass[]{article}
+
 
 
